@@ -1,0 +1,43 @@
+h1{
+    color: #c5f56d;
+    font-size: 50px;
+}
+h2{
+    color: #c5f56d;
+}
+h3{
+    color: white;
+    font-size: 30px;
+}
+body{
+    background-color: #ae0d38;
+}
+
+ul ,ol > li{
+    color: white;
+    font-weight: bold;
+}
+span{
+    color: gold;
+}
+
+.WhiteColor{
+    color: white;
+}
+.moodsImage{
+    max-width: 500px;
+    max-height: 250px;
+}
+
+table > tbody > tr >td {
+    min-width: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+
+p:first-child:first-letter {
+    color: #903; 
+    font-family: Georgia;
+    initial-letter: 2;
+  }
