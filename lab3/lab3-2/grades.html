@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="
+
+background-image: url(a.jpg);
+height: 805px;
+"
+>
+    
+    
+<head>
+    
+    <title>Grades Exercise</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        
+    <form action="http://mumstudents.org/params.php">
+        <fieldset>
+         <p>Name: <input type="text" name="name"></p>
+        <p>Student ID: <input type="text" name="id"></p>
+
+        <div> Assignment:
+            <select name="assignment">
+                <option>lab1</option>
+                <option>lab2</option>
+                <option selected>lab3</option>
+                <option>lab4</option>
+            </select>
+        </div>
+
+        <div>
+            Choose Entry: 
+            <input type="radio" name="entry" value="October" checked > October
+            <input type="radio" name="entry" value="January" > January
+            <input type="radio" name="entry" value="August" > August
+            <input type="radio" name="entry" value="April" > April
+        </div>
+
+
+        <div>
+            confirm that you are not lying <input type="checkbox" name="isLying"> 
+        </div>
+        <input type="submit" value="Get Grade!" >
+    </fieldset>
+    </form>
+
+</div>
+
+</body>
+
+</html>

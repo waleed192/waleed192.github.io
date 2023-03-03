@@ -1,0 +1,60 @@
+
+
+fieldset {
+    max-width: 385px;
+    margin: auto;
+    border-radius: 43px;
+    background-color: #484de4;
+    
+}
+element.style{
+    background-image: url(a.jpg);
+    height: 805px;
+}
+
+
+a{
+    color: red;
+}
+
+label{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align:left;
+    display:inline-block;
+    min-width: 130px;
+}
+
+input[type="submit"]{
+    margin-right: inherit;
+    background-color: #ffffff;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+legend{
+    border: 2px solid gray;
+    background-color: #F6F8F9;
+    border-radius: 5px;
+}
+
+#gender{
+    margin-left: 75px;
+}
+
+#validators{
+  
+    max-width: 450px;
+    margin:0px auto;    
+    position:relative;
+    padding: 10px;
+    
+ }
+
+ footer{
+    position: absolute;
+  }
+  div{
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
