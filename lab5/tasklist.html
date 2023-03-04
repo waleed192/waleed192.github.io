@@ -1,0 +1,76 @@
+<!DOCTYPE html       >
+<html   style="background-image: url(b.jpg);">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Task List</title>
+    <link rel="stylesheet" href="css/tasklist.css">
+
+    <script type="text/javascript">
+        function addTaskClick() {
+            var newTask = document.getElementById('txt_task');
+            if (newTask == '') alert('new task cannot be empty');
+            else {
+                var tasklist = getLocalStorageTaskList();
+                debugger;
+                tasklist.push(newTask.value);
+                newTask.value = '';
+                window.localStorage.setItem('tasklist',JSON.stringify( tasklist));
+                PublishTaskListToTextArea(tasklist);
+                alert('new task saved successfully');
+            }
+
+        }
+        function clearTasksClick() {
+            window.localStorage.setItem('tasklist', []);
+            PublishTaskListToTextArea({});
+            alert('task list cleared successfully');
+        }
+
+        function getLocalStorageTaskList() {
+            var tasklist = window.localStorage.getItem('tasklist');
+            if (tasklist == null || tasklist == undefined || tasklist =='')
+                return [];
+            else return JSON.parse(tasklist);
+        }
+        function PublishTaskListToTextArea() {
+            var txtArea = document.getElementById("txt_tasksList");
+            txtArea.value='';
+            tasklist=getLocalStorageTaskList();
+            for (let i = 0; i < tasklist.length; i++) {
+                txtArea.value += tasklist[i] + '\r\n';
+            }
+        }
+
+
+
+        window.addEventListener('load', PublishTaskListToTextArea, false )
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="mainTitle">Task List</h1>
+        <div style="float: left;width: 50%;">
+            <label for="" class="label">Task Name</label>
+            <div><input type="text" id="txt_task" name="txt_task"></div>
+            <div><input type="button" value="Add Task" onclick="addTaskClick()"></div>
+            <div><input type="button" value="Clear Tasks" onclick="clearTasksClick()"></div>
+
+
+        </div>
+        <div style="float: right;width: 50%;">
+            <label for="" class="label">Task List</label>
+            <textarea name="txt_tasksList" id="txt_tasksList" class="textarea">
+
+            </textarea>
+        </div>
+
+    </div>
+</body>
+
+</html>

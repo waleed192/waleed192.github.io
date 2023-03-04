@@ -1,0 +1,216 @@
+<html data-redeviation-bs-uid="94148" style="background-color: rgb(218, 95, 95);"
+
+
+
+ 
+
+
+><!--
+	CSE 190M, Summer 2012
+	This file is a tip calculator page using JavaScript.
+	-->
+    
+
+<head>
+
+    
+    <script>
+        function calcTip() {
+            var subtotal = document.getElementById('subtotal').value;
+            var tip = document.getElementById('tip').value;
+            
+            var total = ((Number(subtotal) / 100) * Number(tip)) + Number(subtotal);
+            
+            document.getElementById('total').innerHTML ='$'+total.toFixed(2);
+
+        }
+
+    </script>
+
+    <style>
+        body {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+
+        body,
+        input,
+        button {
+            font-family: "Century Gothic", sans-serif;
+            font-size: 20pt;
+        }
+
+        div {
+            margin: 0.5em;
+        }
+    </style>
+    
+
+    <title>Tip Calculator
+
+        
+    </title>
+    
+    <style class="redeviation-bs-style" data-name="content">
+        /*! (c) Philipp König under GPL-3.0 */
+        body>div#redeviation-bs-indicator>div {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        body>#redeviation-bs-sidebar.redeviation-bs-visible,
+        body>#redeviation-bs-overlay.redeviation-bs-visible {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        body.redeviation-bs-noscroll {
+            overflow: hidden !important
+        }
+
+        body>div#redeviation-bs-indicator>div {
+            position: absolute;
+            transform: translate3d(-24px, 0, 0);
+            top: 0;
+            left: 0;
+            width: 24px !important;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0 10px 10px 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 2
+        }
+
+        body>div#redeviation-bs-indicator>div>span {
+            -webkit-mask: no-repeat center/24px;
+            -webkit-mask-image: url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);
+            background-color: #ffffff;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+        
+
+        body>div#redeviation-bs-indicator[data-pos='right'] {
+            left: auto;
+            right: 0
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='right']>div {
+            transform: translate3d(24px, 0, 0);
+            left: auto;
+            right: 0;
+            border-radius: 10px 0 0 10px
+        }
+
+        body>div#redeviation-bs-indicator.redeviation-bs-fullHeight>div {
+            border-radius: 0
+        }
+
+        body>div#redeviation-bs-indicator.redeviation-bs-hover>div {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb {
+            height: 100% !important;
+            top: 0 !important
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb>div {
+            background: transparent
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb>div>span {
+            -webkit-mask-position-y: 20px
+        }
+
+        body>#redeviation-bs-sidebar {
+            width: 350px;
+            max-width: none;
+            height: 0;
+            z-index: 2147483646;
+            background-color: rgba(0, 0, 0, 0.6) !important;
+            color-scheme: normal !important;
+            speak: none;
+            border: none;
+            display: block !important;
+            transform: translate3d(-350px, 0, 0);
+            transition: width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s
+        }
+
+        body>#redeviation-bs-sidebar[data-pos='right'] {
+            left: auto;
+            right: 0;
+            transform: translate3d(350px, 0, 0)
+        }
+
+        body>#redeviation-bs-sidebar.redeviation-bs-visible {
+            width: calc(100% + 350px);
+            height: 100%;
+            transform: translate3d(0, 0, 0);
+            transition: opacity 0.3s, transform 0.3s
+        }
+
+        body>#redeviation-bs-sidebar.redeviation-bs-hideMask {
+            background: none !important
+        }
+
+        body>#redeviation-bs-sidebar.redeviation-bs-hideMask:not(.redeviation-bs-hover) {
+            width: calc(350px + 50px)
+        }
+
+        body>#redeviation-bs-overlay {
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            z-index: 2147483647;
+            border: none;
+            speak: none;
+            background: rgba(0, 0, 0, 0.5) !important;
+            transition: opacity 0.3s
+        }
+    </style>
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="">
+    
+    <style>
+        p {
+          background-image: url('a.jpg');
+          height: 600;
+        }
+        </style>
+
+    <div>
+        <label><input id="subtotal" type="text"> SubT</label>
+    </div>
+
+    <div>
+        <label><input id="tip" type="text">Tip</label>
+    </div>
+
+    <div>
+        <button id="btn" onclick="calcTip();">Calculate</button>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>TOTAL:</h2>
+        <p id="total"></p>
+    </div>
+
+
+    <app-frame-94148 id="redeviation-bs-sidebar" class="notranslate" aria-hidden="true" data-theme="default"
+        data-pos="right"></app-frame-94148>
+    <div id="redeviation-bs-indicator" data-theme="default" class="redeviation-bs-fullHeight"
+        style="height: 100%; top: 0%;"></div>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
