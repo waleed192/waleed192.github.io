@@ -1,0 +1,61 @@
+body {
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 12pt;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#header {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: normal;
+	font-style: italic;
+	font-family: "Impact", fantasy;
+}
+
+legend {
+	font-family: "Impact", fantasy;
+	font-size: 120%;
+}
+
+textarea {
+	font-family: monospace;
+    font-size: 12pt;
+    margin: 12px;
+	width: 56%;
+    min-height: 162px;
+}
+
+.mainTextDiv{
+border: black solid 1px;
+min-width: 90%;
+min-height: 250px;
+}
+
+.mainTextDiv > input{
+	font-family: cursive;
+    font-size: 28pt;
+    margin: 20px;
+    margin-left: 42px;
+	background-color: darkcyan;
+
+	width: auto;
+}
+
+.textareaLabel
+{
+    margin-top: 9px;
+    background-color: #e52a2a;
+    width: 63px;
+    margin-left: 12px;
+
+}
+.longlabel
+{
+    width: 126px;
+}
+

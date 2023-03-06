@@ -1,0 +1,19 @@
+1-
+booyah references the function
+booyah() calls the function ( the output of the booyah must be a function)
+
+2- two alerts with 6
+
+3- 		function booyah1() {
+            alert('BOOYAH!');
+        }
+
+        function booyah2() {
+            return function () {
+                alert('BOOYAH!');
+            }
+        }
+
+4- is a general approach to the use of client-side JavaScript in web pages so that if JavaScript features are partially or fully absent in a user's web browser, then the user notices as little as possible any lack of the web page's JavaScript functionality
+
+
