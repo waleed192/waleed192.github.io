@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Accounts List</title>
+
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="js/main.js"></script>
+
+</head>
+<body    style="background-image: url(a.jpg);">
+    <br>
+    <div class="mainContainer">
+        <h2 class="mainlabel" >Accounts List</h2>
+        <div class="labelInputGroup">
+            <label class="label" >Account Name :</label>
+            <input type="text" name="txt_accName" id="txt_accName" placeholder="enter account name">
+        </div>
+        <div class="labelInputGroup">
+            <label class="label" >Deposit :</label>
+            <input type="number" name="txt_deposit" id="txt_deposit" placeholder="enter deposit amount">
+        </div>
+        <div class="buttonDiv">
+            <input type="button" id="btn_createAccount" name="btn_createAccount" onclick="createAccHandler()" value="Create New Account" class="button">
+            <input type="button" id="btn_deposit" name="btn_deposit" onclick="openModal(true)" value=" Deposit " class="button">
+            <input type="button" id="btn_debit" name="btn_debit" onclick="openModal(false)" value=" Debit " class="button">
+      
+        </div>
+        <div class="textareaDiv">
+            <textarea id="txt_accountsList" name="txt_accountsList" class="textarea"></textarea>
+        </div>
+        <section class="modal hidden">
+            <div class="flex">
+              <button class="btn-close">⨉</button>
+            </div>
+            <div style="text-align: center;">
+             <select id="sel_account"></select>
+             <br>
+             <input type="number" id="txt_amount">
+             <br>
+             <input type="button" id="btn_submit" onclick="debitDepositHandler()">
+            </div>
+          </section>
+          <div class="overlay hidden"></div>
+    </div>
+</body>
+</html>
