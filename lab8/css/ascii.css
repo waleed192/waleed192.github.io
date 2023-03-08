@@ -1,0 +1,46 @@
+body{
+    background-color: #0303f5;
+    font-size: 148px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1{
+    
+    font-size: 49px;
+    font-weight: bold;
+    text-align: center;
+    font-family: fantasy;
+}
+.txtAnime{
+    width: 90%;
+    font-size: 12px;
+    height: 400px;
+    font-family: monospace;
+}
+
+.label{
+    color: white;
+    margin-top: -32px;
+    background-color: #7979f2;
+    width: 230px;
+    text-align: center;
+}
+
+.group{
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+}
+
+fieldset{
+    width: fit-content;
+    display: inline-block;
+    border: 25px solid red;
+    font-size: 37px;
+    font-family: fantasy;
+    font-weight: bold;
+}
+fieldset > input,select{
+    font-weight: bold;
+}

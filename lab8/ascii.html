@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>CS472: ASCII Animation Viewer</title>
+    
+    <link href="css/ascii.css" type="text/css" rel="stylesheet">
+    <script src="js/animations.js"></script>
+    <script src="js/ascii.js"></script>
+</head>
+<body>
+    <h1>CSE 190 M ASCII Animation Viewer</h1>
+    <textarea id="txt_anime" rows="20" cols="80" class="txtAnime"></textarea>
+    <div class="group">
+
+        <fieldset>
+            <legend>Play Controls :</legend>
+            <input type="button" id="btn_start" value=" Start " onclick="startAnimation()">
+            <input type="button" id="btn_stop" value=" Stop " disabled onclick="stopAnimation()">
+        </fieldset>
+        <fieldset>
+            <legend>Animation :</legend>
+            <select id="sel_anime" onchange="animationOnchangeHandler()">
+                <option value="Blank" >Blank</option>
+                <option value="Exercise">Exercise</option>
+                <option value="Juggler">Juggler</option>
+                <option value="Bike">Bike</option>
+                <option value="Dive">Dive</option>
+                <option value="Custom">Custom</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size :</legend>
+            <select id="sel_size" onchange="sizeOnchangeHandler()">
+                <option value="7pt">Tiny</option>
+                <option value="10pt">Small</option>
+                <option value="12pt">Medium</option>
+                <option value="16pt">Large</option>
+                <option value="24pt">Extra Large</option>
+                <option value="32pt">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed :</legend>
+            <input id="chk_speed" name="chk_speed"  type="checkbox" onchange="speedOnchangeHandler()">
+            <label for="chk_speed">Turbo </label><br>
+         </fieldset>
+
+    </div>
+   
+</body>
+</html>
